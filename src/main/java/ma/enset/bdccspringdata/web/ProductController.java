@@ -2,6 +2,7 @@ package ma.enset.bdccspringdata.web;
 
 import ma.enset.bdccspringdata.entity.*;
 import ma.enset.bdccspringdata.repository.*;
+import org.springframework.validation.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.*;
@@ -25,7 +26,7 @@ public class ProductController {
     //Consulter un produit
     @GetMapping(value = "/{id}")
     public Product findById(@PathVariable Long id) {
-        return productRepository.findById(id).orElseThrow(()-> new RuntimeException());
+        return productRepository.findById(id).orElseThrow(() -> new RuntimeException());
     }
 
     //Chercher des produits
@@ -39,9 +40,25 @@ public class ProductController {
     public void saveProduct(@RequestBody Product p) {
         productRepository.save(p);
     }
-    //delete product
-    @DeleteMapping(value = "/delete/{id}")
-    public void deleteProduct(@PathVariable  Long id) {
-       productRepository.findById(id).orElseThrow( ()->new RuntimeException("Can not find the product"));
+
+
+    @PutMapping
+    public void update(@RequestBody Product p) {
+         productRepository.save(p);
     }
+
+    //delete product
+    @DeleteMapping(value = "/del/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        Optional<Product> product =  productRepository.findById(id);
+
+        if (product.isPresent()){
+            productRepository.delete(product.get());
+        }else{
+            throw new RuntimeException("Can not find the product");
+        }
+
+
+    }
+
 }
