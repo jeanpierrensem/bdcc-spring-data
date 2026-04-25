@@ -8,6 +8,7 @@ import java.util.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Consultation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

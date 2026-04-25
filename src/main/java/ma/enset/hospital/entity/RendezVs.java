@@ -10,7 +10,7 @@ import java.util.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
+@Builder
 public class RendezVs {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
