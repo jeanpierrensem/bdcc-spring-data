@@ -17,3 +17,7 @@ Spring Boot-Spring Data-Spring Data JPA-H2-MySQL
 - Remplacement base de données MySQL**
 <img src="captures/4.png" />
 <hr/>
+
+<h1>  Projet Hostpital - Gestion des patients et des rendeez </h1> 
+un dans le même projet BDCC, un sous-projet/module est crée pour gérer les patients et rendez-vous
+
