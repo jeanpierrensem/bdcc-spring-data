@@ -14,12 +14,16 @@ public class BdccHospitalSpringDataApplication {
   PatientRepository patientRepository ;
   RendezVousController rendezVousController;
   MedecinController medecinController ;
+  ConsultationController consultationController;
 
-    public BdccHospitalSpringDataApplication(PatientRepository patientRepository, RendezVousController rendezVousController, MedecinController medecinController) {
+    public BdccHospitalSpringDataApplication(PatientRepository patientRepository, RendezVousController rendezVousController, MedecinController medecinController, ConsultationController consultationController) {
         this.patientRepository = patientRepository;
         this.rendezVousController = rendezVousController;
         this.medecinController = medecinController;
+        this.consultationController = consultationController;
     }
+
+
 
 
 
@@ -83,7 +87,7 @@ public class BdccHospitalSpringDataApplication {
             rendezVousController.saveAllRendezVous(List.of(rendezVs, rendezVs1, rendezVs2));
 
 
-            //consultation
+
 
             //Medecin
             Medecin medecin = Medecin.builder()
@@ -112,6 +116,17 @@ public class BdccHospitalSpringDataApplication {
                     .build();
 
              medecinController.saveAllMedecin(List.of(medecin, medecin1, medecin2));
+
+             // //consultation
+            Consultation consulattion = Consultation.builder()
+                    .id(null)
+                    .rendezVs(rendezVs)
+                    .dateConsultation(new Date())
+                    .rapport("Le rapport de la connsutation")
+                    .build();
+
+            consultationController.saveConsultation(consulattion);
+
 
         };
 
