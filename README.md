@@ -29,3 +29,7 @@ un dans le même projet BDCC, un sous-projet/module est crée pour gérer les pa
 <img src="captures/7.png" />
 - Rechercher un patinet dont le contien le mot clé jean 
 <img src="captures/8.png" />
+- Gestion des Médecins
+  <img src="captures/9.png" />
+- Gestion des consulations
+  <img src="captures/10.png" />
