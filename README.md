@@ -23,6 +23,9 @@ un dans le même projet BDCC, un sous-projet/module est crée pour gérer les pa
 
 - Création de la base de donné mémoire H2
   <img src="captures/5.png" />
-- Gestion des Patients
-  <img src="captures/6.png" />
-  <img src="captures/7.png" />
+- Liste des patients
+<img src="captures/6.png" />
+- rechercher le patien d'id 1
+<img src="captures/7.png" />
+- Rechercher un patinet dont le contien le mot clé jean 
+<img src="captures/8.png" />
