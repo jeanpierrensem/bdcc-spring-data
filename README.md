@@ -18,7 +18,7 @@ Spring Boot-Spring Data-Spring Data JPA-H2-MySQL
 <img src="captures/4.png" />
 <hr/>
 
-<h1>  Projet Hostpital - Gestion des patients et des rendeez </h1> 
+<h1>  Projet Hostpital - Gestion des patients, Médecins, rendeez-vous et Consulations </h1> 
 un dans le même projet BDCC, un sous-projet/module est crée pour gérer les patients et rendez-vous
 
 - Création de la base de donné mémoire H2
