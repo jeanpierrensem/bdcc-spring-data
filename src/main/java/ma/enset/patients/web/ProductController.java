@@ -1,11 +1,9 @@
-package ma.enset.bdccspringdata.web;
+package ma.enset.patients.web;
 
-import ma.enset.bdccspringdata.entity.*;
-import ma.enset.bdccspringdata.repository.*;
-import org.springframework.validation.annotation.*;
+import ma.enset.patients.entity.*;
+import ma.enset.patients.repository.*;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.*;
 import java.util.*;
 
 @RestController

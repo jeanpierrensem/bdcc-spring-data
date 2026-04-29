@@ -1,7 +1,7 @@
-package ma.enset.bdccspringdata;
+package ma.enset.patients;
 
-import ma.enset.bdccspringdata.entity.*;
-import ma.enset.bdccspringdata.web.*;
+import ma.enset.patients.entity.*;
+import ma.enset.patients.web.*;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.*;

@@ -1,6 +1,6 @@
-package ma.enset.bdccspringdata.repository;
+package ma.enset.patients.repository;
 
-import ma.enset.bdccspringdata.entity.*;
+import ma.enset.patients.entity.*;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.*;
 

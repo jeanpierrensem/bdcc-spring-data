@@ -1,4 +1,4 @@
-package ma.enset.bdccspringdata.entity;
+package ma.enset.patients.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
