@@ -33,3 +33,15 @@ un dans le même projet BDCC, un sous-projet/module est crée pour gérer les pa
   <img src="captures/9.png" />
 - Gestion des consulations
   <img src="captures/10.png" />
+
+<h1>  Projet Gestion des Utilisateurs et Rôle </h1> 
+un dans le même projet BDCC, un sous-projet/module ma.enset.userhab est crée pour gérer les utilisateur et rôle ainsi que l'authentification 
+
+- Gestion des utilisateurs et roles
+  <img src="captures/11.png" />
+- Test succes authentification
+  <img src="captures/12.png" />
+- Test echec authentification 
+ <img src="captures/13.png" />
+- BAscule sur une base de données MySQL
+ <img src="captures/14.png" />

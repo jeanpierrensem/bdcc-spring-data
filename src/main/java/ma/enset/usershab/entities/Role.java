@@ -16,7 +16,9 @@ public class Role {
     private  Long id;
     @Column(unique = true, length = 20)
     private String roleName ;
+    @Column(name = "DESCRIPTION")
     private String desc ;
+    @ToString.Exclude
     @ManyToMany(fetch = FetchType.LAZY)
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
 }

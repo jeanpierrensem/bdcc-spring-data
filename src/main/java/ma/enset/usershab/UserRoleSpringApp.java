@@ -16,8 +16,7 @@ import java.util.stream.*;
 @AllArgsConstructor
 public class UserRoleSpringApp {
 
-     private USerService uSerService ;
-
+    private USerService uSerService ;
     public static void main(String[] args) {
         SpringApplication.run(UserRoleSpringApp.class, args);
     }
@@ -31,6 +30,7 @@ public class UserRoleSpringApp {
                     .password("12345")
                     .roles(null)
                     .build();
+
             User admin = User.builder()
                     .username("admin")
                     .password("12345")
@@ -38,6 +38,7 @@ public class UserRoleSpringApp {
                     .build();
             uSerService.addNewUser(user1);
             uSerService.addNewUser(admin);
+
             //Ajouter role
             Stream.of("STUDENT", "USER", "ADMIN").forEach(r->{
                 Role role1 = Role.builder()
@@ -46,16 +47,20 @@ public class UserRoleSpringApp {
              uSerService.addNewRole(role1);
             });
 
-        uSerService.addRoleToUser("user1", "STUDENT");
-        uSerService.addRoleToUser("user1", "USER");
-            uSerService.addRoleToUser("admin", "STUDENT");
-            uSerService.addRoleToUser("admin", "ADMIN");
+                uSerService.addRoleToUser("user1", "STUDENT");
+                uSerService.addRoleToUser("user1", "USER");
+                uSerService.addRoleToUser("admin", "STUDENT");
+                uSerService.addRoleToUser("admin", "ADMIN");
 
-
-
-
+            try{
+                User user = uSerService.authenticate("user1","1345");
+               System.out.println(user.getUserId());
+               System.out.println(user.getUsername());
+               System.out.println("role =>");
+               user.getRoles().forEach( r-> System.out.println("Role=>"+ r));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         };
-
-
     }
 }

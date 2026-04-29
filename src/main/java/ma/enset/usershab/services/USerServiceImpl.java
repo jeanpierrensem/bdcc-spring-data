@@ -38,11 +38,22 @@ public class USerServiceImpl implements USerService {
     User user = findUserByUsername(username);
     if (user.getRoles() !=null)
         user.getRoles().add(roleToAdd);
-    roleToAdd.getUsers().add(user);
+        roleToAdd.getUsers().add(user);
     }
 
     @Override
     public Role findRoleByRoleName(String roleName) {
         return  roleRepository.findByRoleName(roleName);
+    }
+
+    @Override
+    public User authenticate(String username, String password) {
+
+        User user = findUserByUsername(username);
+        if(user==null)   throw new RuntimeException("Bad credentiat");
+        if(user.getPassword().equals(password)){
+            return user;
+        }
+        throw new RuntimeException("Bad credentiat");
     }
 }
